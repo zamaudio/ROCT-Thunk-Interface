@@ -12,23 +12,12 @@ https://github.com/RadeonOpenCompute/ROCK-Radeon-Open-Compute-Kernel-Driver
 
 #### Building the Thunk
 
-A simple cmake-based system is available for building thunk. To build the thunk from the the ROCT-Thunk-Interface directory, execute:
+Building the thunk kernel-userspace API support library is done using the
+Meson/Ninja build system, which is used in the following way:
 
 ```bash
-    mkdir -p build
-    cd build
-    cmake ..
-    make
-```
-
-If the hsakmt-roct and hsakmt-roct-dev packages are desired:
-
-```bash
-    mkdir -p build
-    cd build
-    cmake ..
-    make package
-    make package-dev
+ $ meson builddir
+ $ ninja -C builddir
 ```
 
 #### Disclaimer
